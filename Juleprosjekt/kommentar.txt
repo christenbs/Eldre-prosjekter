@@ -1,0 +1,7 @@
+Jeg vil egentlig legge til link på alle banene på kartet, men da vil det bli ganske vanskelig å finne de sidene jeg har alget, så jeg droppet det.
+Let etter de markørene som får mindre opacity, så finner du de på kartet.
+
+Alle sidene er responsive etter 600px og 1000px
+
+Jeg har laget undersider for banene, Belgia, Nederland, Bahrain og Imola iItalia 
+og de tre øverste lagene Mercedes, Red Bull og McLaren

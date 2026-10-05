@@ -1,0 +1,1817 @@
+/*div*/
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+main{
+    padding: 0;
+    margin: 0;
+}
+img{
+    display: block;
+}
+a img:hover{
+    opacity: 80%;
+}
+.scrollEffekt{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.femti{
+    width: 50%;
+}
+.rowSpan2{
+    grid-row: span 2;
+}
+/*Header*/
+header{
+    border-bottom: solid red 5px;
+    width: 100%;
+}
+#headerGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#headerHvit{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+}
+#headerRod{
+    background-color: red;
+}
+#headerRodFlex{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+}
+#f1Logo{
+    width: 150px;
+    height: 100px;
+}
+header h1{
+    font-size: 3rem;
+}
+/*Nav*/
+nav{
+    display: flex;
+    gap: 35px;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.7rem;
+}
+nav a:hover{
+    text-decoration: underline;
+    transition: 1s;
+    text-underline-offset: 3px;
+}
+.active{
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+#banerLink{
+    display: none;
+}
+/*Index*/
+#nyheterGrid{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border-top: double grey 4px;
+    border-bottom: double grey 4px;
+    padding-top: 10px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+#nyheterGrid h1{
+    text-align: center;
+}
+#nyheterGrid img{
+    width: 80%;
+    margin: auto;
+}
+#nyheterBorder{
+    padding-left: 10px;
+}
+#indexKrasj{
+    border-right: solid black 1px;
+}
+#krasjGrid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5px;
+    row-gap: 30px;
+}
+#krasjGrid img{
+    width: 95%;
+    margin: auto;
+}
+#krasjGrid div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#krasjGrid div.justify-contentLeft img{
+    margin-left: 0;
+}
+.indexHøyre p{
+    width: 95%;
+    margin: auto;
+}
+#finale{
+    margin-top: 8px;
+    border-top: solid black 1px;
+    padding-top: 8px;
+    margin-left: 5px;
+}
+.avisFlex{
+    display: flex;
+    gap: 5px;
+}
+#nyheterGrid img.avisImg{
+    width: 55%;
+    margin: auto;
+}
+#indexGrid{
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    width: 98%;
+    margin: auto;
+    gap: 10px;
+}
+#indexHeaderGrid{
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+}
+#indexHeaderGrid div{
+    text-decoration: underline;
+    text-align: center;
+    font-size: 1.5rem;
+}
+#indexGridLiten1{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5px;
+    border-right: solid black 2px;
+    padding-right: 10px;
+}
+.lopskalenderGrid{
+    display: grid;
+    grid-template-columns: 0.75fr 1fr 1.25fr;
+    gap: 5px;
+    align-items: center;
+    border: solid black 1px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+.lopskalenderGrid img{
+    width: 70%;
+    display: block;
+    margin: auto;
+    border: solid black 1px;
+}
+#indexGridLiten2{
+    display: grid;
+    gap: 5px;
+}
+#indexGridLiten2 div{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+#indexGridLiten2 img{
+    width: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.indexLagFlex{
+    border: solid black 1px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+#indexGridLiten2 img.indexBil{
+    width: 200px;
+}
+#headerLopskalender{
+    grid-column: span 2;
+}
+#lagMerc{
+    background-color: #00D2BE;
+}
+#lagRB{
+    background-color: #12142d;
+    color: white;
+}
+#lagMc{
+    background-color: #ff9700;
+}
+#lagAM{
+    background-color: #006F62;
+}
+#lagAlpine{
+    background-color: #0090FF;
+}
+#lagFerrari{
+    background-color: #DC0000;
+}
+#lagAT{
+    background-color: #2B4562;
+    color: white;
+}
+#lagAR{
+    background-color: #900000;
+    color: white;
+}
+#lagHaas{
+    background-color: whitesmoke;
+}
+#lagWilliams{
+    background-color: #005AFF;
+}
+/*Lag*/
+.lagBanner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+.lagBanner h1{
+    font-size: 3rem;
+}
+.lagBannerImgFlex{
+    display: flex;
+    justify-content: flex-end;
+}
+.lagBilRamme{
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+}
+.lagBil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    border-radius: 20px;
+}
+.lagBil img{
+    padding: 10px;
+    border-radius: 10px;
+    width: 50%;
+}
+.lagForere{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    color: white;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.lagForereFlex{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lagForereFlex div{
+    width: 50%;
+    height: 50%;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+.lagForereFlex div p{
+    width: 95%;
+    margin: auto;
+    padding-bottom: 5px;
+}
+/*Mercedes*/
+#headerRodMerc{
+    background-color: #00D2BE;
+}
+#headerMerc{
+    border-bottom: solid black 5px;
+}
+#bannerMerc{
+    background-color: #00D2BE;
+    color: white;
+    border-bottom: solid black 5px;
+}
+#bannerMerc img{
+    width: 20%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.lagBil img#W12{
+    border-bottom: solid #00D2BE 5px;
+}
+.mercForere{
+    background-color: black;
+}
+.mercForereFlex div{
+    background-color: #a8a9ad;
+}
+.mercForereSection{
+    border: solid 5px #00D2BE;
+}
+#wolff{
+    background-color: #00D2BE;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#wolff img{
+    width: 15%;
+}
+#wolffFlex{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#wolffFlex div{
+    width: 50%;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#wolffFlex div p{
+    width: 80%;
+}
+#mercedesSuksess img{
+    width: 100%;
+}
+/*RedBull*/
+#headerRB{
+    border-bottom: solid #fdd205 5px;
+}
+#headerRodRB{
+    background-color: #12142d;
+}
+#bannerRB{
+    background-color: #12142d;
+    color: white;
+    border-top: solid #e41349 5px;
+    border-bottom: solid #e41349 5px;
+}
+#bannerRB img{
+    width: 50%;
+}
+#RB16B{
+    background-image: url(bilder/lagene/RB16Bbakgrunn.png);
+    min-height: 45vh;
+}
+#RBforere{
+    background-color: #12142d;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 60vh;
+}
+#RBforere img{
+    width: 100%;
+}
+#RBforere div{
+    width: 25%;
+    color: white;
+}
+#RBforere h1, h2, h3{
+    text-align: center;
+}
+#RBforere small{
+    font-size: 1.1rem;
+}
+#RBforere small p{
+    padding: 10px;
+    border-radius: 10px;
+    border: dotted #e41349 3px;
+    text-align: center;
+}
+#horner{
+    background-image: url(bilder/lagene/hornerBakgrunn.png);
+    min-height: 70vh;
+}
+#RBsuksess img{
+    width: 100%;
+}
+/*Mclaren*/
+#headerMc{
+    border-bottom: solid #0059a6 5px;
+}
+#headerRodMc{
+    background-color: #ff9700;
+}
+#bannerMc{
+    background-color: #ff9700;
+    color: white;
+    border-bottom: solid #0059a6 5px;
+}
+#bannerMc img{
+    width: 25%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.lagBil img#MCL35M{
+    border-bottom: solid #ff9700 5px;
+}
+.mcForere{
+    background-color: #0059a6;
+}
+.mcForere img{
+    width: 40%;
+    margin-bottom: 20px;
+}
+.mcForereFlex div{
+    background-color: #ff9700;
+}
+.mcForereSection{
+    border: solid 5px #0059a6;
+}
+#zakBrownRamme{
+    min-height: 50vh;
+    background-color: #ff9700;
+    display: flex;
+    align-items: center;
+}
+#zakBrownFlex{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#zakBrownFlex p{
+    width: 50%;
+    margin: auto;
+}
+#zakBrownFlex img{
+    width: 35%;
+    margin: auto;
+}
+#mcMonza{
+    width: 100%;
+}
+/*Forere*/
+#forereMain{
+    background-color: rgb(37, 35, 35);
+    padding-bottom: 15px;
+}
+#imgF1Grid{
+    width: 100%;
+    display: block;
+    margin: auto;
+    opacity: 75%;
+    padding-bottom: 20px;
+}
+#forereGrid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 20px;
+    width: 98%;
+    margin: auto;
+}
+.forereGridLiten{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    text-align: center;
+}
+.forereGridLiten img{
+    width: 100%;
+}
+.forereLogo{
+    grid-row: span 2;
+    display: flex;
+    align-items: center;
+}
+.forereGridLiten h3{
+    color: white;
+}
+#mercLogo{
+    background-color: #00D2BE;
+}
+#mercLogo img{
+    display: block;
+    margin: auto;
+    width: 60%;
+}
+#merc{
+    border-right: solid #00D2BE 5px;
+}
+#RBlogo{
+    background-color: #12142d;
+}
+#RB{
+    border-right: solid #12142d 5px;
+}
+#imgRBlogo{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+#mcLaren{
+    border-right: solid #ff9700 5px;
+}
+#mcLogo{
+    background-color: #ff9700;
+}
+#mcLogo img{
+    display: block;
+    margin: auto;
+    width: 60%;
+}
+#astonM{
+    border-right: solid #006F62 5px;
+}
+#AMlogo{
+    background-color: #006F62;
+}
+#alpine{
+    border-right: solid #0090FF 5px;
+}
+#alpineLogo{
+    background-color: #0090FF;
+}
+#imgAlpineLogo{
+    width: 80%;
+    margin: auto;
+}
+#ferrari{
+    border-right: solid #DC0000 5px;  
+}
+#ferrariLogo{
+    background-color: #DC0000;
+}
+#sainz, #leclerc{
+    width: 75%;
+    margin: auto;
+}
+#alphaTauri{
+    border-right: solid #2B4562 5px;  
+}
+#ATlogo{
+    background-color: #2B4562;
+}
+#imgATlogo{
+    width: 75%;
+    margin: auto;
+}
+#alfaRomeo{
+    border-right: solid #900000 5px;  
+}
+#ARlogo{
+    background-color: #900000;
+}
+#giovinazzi, #kimi{
+    width: 75%;
+    margin: auto;
+}
+#imgARlogo{
+    width: 75%;
+    margin: auto;
+}
+#haas{
+    border-right: solid white 5px;  
+}
+#haasLogo{
+    background-color: white;
+}
+#mick, #mazepin, #imgHaasLogo{
+    width: 75%;
+    margin: auto;
+}
+#williams{
+    border-right: solid #005AFF 5px;  
+}
+#williamsLogo{
+    background-color: #005AFF;
+}
+#latifi{
+    width: 80%;
+    margin: auto;
+}
+#imgWilliamsLogo{
+    width: 70%;
+    margin: auto;
+}
+/*Kart*/
+#kart{
+    width: 100%;
+    padding-top: 15px;
+}
+#kartRamme{
+    position: relative;
+}
+.kartPin{
+    width: 1%;
+    position: absolute;
+}
+#kartPinBahrain{
+    top: 43%;
+    left: 60.2%;
+}
+#kartPinImola{
+    top: 31%;
+    left: 49.3%;
+}
+#kartPinBelgia{
+    top: 26.5%;
+    left: 47.5%;
+}
+#kartPinNederland{
+    top: 28%;
+    left: 48%;
+}
+#kartPinMonza{
+    top: 30.5%;
+    left: 48.8%;
+}
+#kartPinPortugal{
+    top: 35.5%;
+    left: 44%;
+}
+#kartPinQatar{
+    top: 44%;
+    left: 60.5%;
+}
+#kartPinRussland{
+    top: 32%;
+    left: 57.5%;
+}
+#kartPinSpania{
+    top: 34%;
+    left: 46.5%;
+}
+#kartPinUK{
+    top: 25.5%;
+    left: 45.7%;
+}
+#kartPinMonaco{
+    top: 32.3%;
+    left: 48.5%;
+}
+#kartPinFrankrike{
+    top: 32.3%;
+    left: 48%;
+}
+#kartPinUAE{
+    top: 44.2%;
+    left: 61.5%;
+}
+#kartPinSaudiA{
+    top: 46%;
+    left: 57.2%;
+}
+#kartPinTyrkia{
+    top: 34%;
+    left: 55%;
+}
+#kartPinAzerbaijan{
+    top: 34%;
+    left: 60%;
+}
+#kartPinOsterrike{
+    top: 30.5%;
+    left: 48%;
+}
+#kartPinUngarn{
+    top: 30%;
+    left: 51%;
+}
+#kartPinUSA{
+    top: 41%;
+    left: 19%;
+}
+#kartPinMexico{
+    top: 47%;
+    left: 18.5%;
+}
+#kartPinBrasil{
+    top: 71.5%;
+    left: 33.5%;
+}
+#kartKalender{
+    display: none;
+}
+#indexGridLiten1Kart{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5px;
+    border-right: solid black 2px;
+    padding-right: 10px;
+}
+/*Baner*/
+.baneHeader{
+    text-align: center;
+    font-size: 3rem;
+}
+.banekartRamme{
+    position: relative;
+    padding-top: 80px;
+    margin: auto;
+}
+.baneflagg{
+    position: absolute;
+    width: 18%;
+    top: 6%;
+    left: 12%;
+    border: solid black 2px;
+}
+.banekart{
+    background-color: white;
+    margin: auto;
+    width: 60%;
+}
+.baneFlaggGrid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(1,3px);
+    width: 85%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+/*Bahrain*/
+#bahrainBanner{
+    background-image: url(bilder/baner/bahrainBane.jpeg);
+    min-height: 105vh;
+}
+#bahrainInfoSammendrag{
+    min-height: 80vh;
+    background-color: #ce1126;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#bahrainInfoSammendrag div{
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+#bahrainInfoSammendrag p{
+    width: 75%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    border: black 1px solid;
+}
+#bahrainInfoSammendrag img{
+    width: 60%;
+    border-radius: 10px;
+}
+#bahrainInfoResultat{
+    display: flex;
+}
+#bahrainInfoResultat section.femti{
+    width: 50%;
+}
+#bahrainPallFlex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+#bahrainPall{
+    display: grid;
+    grid-template-columns: repeat(14,1fr);
+    min-height: 50vh;
+}
+.span5{
+    grid-column: span 5;
+}
+.span4{
+    grid-column: span 4;
+}
+.span2{
+    grid-column: span 2;
+}
+#bahrainPall img#bahrainBottas{
+    width: 105%;
+    margin: auto;
+    margin: 0;
+}
+#bahrainPall div{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+#bahrainPall img{
+ width: 115%;
+}
+#pallHamilton{
+    border-bottom: solid 5px #c69320;
+}
+#pallVerstappen{
+    border-bottom: solid 5px #a8a9ad;
+}
+#pallBottas{
+    border-bottom: solid 5px #a46628;
+}
+.femti div#bahrainResultatSammendrag{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+#bahrainResultatSammendrag p{
+    width: 75%;
+    margin: auto;
+    font-size: 1.2rem;
+    background-color: #ce1126;
+    padding: 30px;
+    border-radius: 10px;
+    color: whitesmoke;
+    border: black 1px solid;
+}
+#bahrainFFramme{
+    display: flex;
+    border-bottom: #ce1126 solid 5px;
+    border-top: #ce1126 solid 5px;
+    background-color: #ce1126;
+}
+#bahrainFFramme div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: white;
+}
+#bahrainFFramme div img{
+    width: 100%;
+    border-radius: 10px;
+}
+#bahrainFFramme section{
+    width: 80%;
+    margin: auto;
+}
+#bahrainFFgrid{
+    display: grid;
+    grid-template-columns: 1.41fr 0.59fr;
+    gap: 3%;
+}
+#bahrainFFimg{
+    background-color: white;
+}
+#bahrainFF{
+    background-color: #ce1126;
+}
+
+/*Imola*/
+#italiaBanner{
+    background-image: url(bilder/baner/imolaBane.jpeg);
+    min-height: 105vh;
+}
+#imolaMain{
+    background-color: rgb(58, 54, 54);
+    padding-bottom: 30px;
+}
+#imolaHeader{
+    color: white;
+}
+#imolaBanekart{
+    border: solid black 2px;
+}
+#italiaFlaggRod{
+    background-color: #cd212a;
+}
+#italiaFlaggHvit{
+    background-color: white;
+}
+#italiaFlaggGronn{
+    background-color: #008c45;
+}
+#imolaInfoGronn{
+    width: 80%;
+    min-height: 40vh;
+    margin: auto;
+    background-color: #008c45;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+#imolaInfoGronnGrid{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;  
+    min-height: 30vh;
+}
+#imolaInfoGronnGridImg{
+    display: flex;
+    gap: 2%;
+}
+#imolaInfoGronnGridImg img{
+    width:48%;
+    border-radius: 10px;
+}
+#imolaInfoGronnGridP{
+    width: 90%;
+    margin: auto;
+    font-size: 1.1rem;
+}
+#imolaInfoHvit{
+    width: 80%;
+    min-height: 40vh;
+    margin: auto;
+    background-color: white;
+    display: flex;
+    align-items: center; 
+    border-radius: 10px;
+    margin-top: 15px;
+}
+#imolaInfoHvitGrid{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+#imolaInfoHvitGrid img{
+    width: 95%;
+    margin: auto;
+}
+#imolaInfoHvitGrid div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.1rem;
+}
+#imolaInfoRod{
+    background-color: #cd212a;
+    width: 80%;
+    min-height: 40vh;
+    margin: auto;
+    display: flex;
+    align-items: center; 
+    border-radius: 10px;
+    margin-top: 15px;
+}
+#imolaInfoRodGrid{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+#imolaInfoRodGrid div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#imolaInfoRodGrid div img{
+    width: 50%;
+    border-radius: 10px;
+}
+#imolaInfoRodGrid div#p{
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-size: 1.1rem;
+}
+/*Belgia*/
+#belgiaBanner{
+    background-image: url(bilder/baner/spaFrancorchamps.jpeg);
+    min-height: 105vh;
+}
+#belgiaFlaggSvart{
+    background-color: #000000;
+}
+#belgiaFlaggGul{
+    background-color: #fdda24;
+}
+#belgiaFlaggRod{
+    background-color: #ef3340;
+}
+#belgiaInfoGridRamme{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+#belgiaInfoGridRamme section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    height: 100%;
+}
+.belgiaP{
+    width: 70%;
+    text-align: center;
+    font-size: 1.1rem;
+}
+#belgiaSammendragGrid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 4%;
+    width: 90%;
+    margin: auto;
+}
+#belgiaSammendragGrid img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+#belgiaResultat div.belgiaFlex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#belgiaResultat div div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    margin: auto;
+}
+#belgiaResultat img{
+    width: 60%;
+    border-radius: 10px;
+}
+.belgiaSvart{
+    background-color: #000000;
+}
+#belgiaRod{
+    background-color: #ef3340;
+}
+#belgiaGul{
+    background-color: #fdda24;
+}
+#belgiaGul p.padding{
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+#belgiaFunFacts{
+    background-color: #fdda24;
+}
+#belgiaFunFacts div{
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#belgiaFunFactsImg{
+    background-color: #000000;
+}
+#belgiaFunFactsImg div{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#belgiaFunFactsImg div img{
+    width: 50%;
+    margin: auto;
+    border-radius: 10px;
+}
+#belgiaFunFactsImg div img#belgiaBottas{
+    width: 40%;
+}
+#belgiaVideo{
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#belgiaVideo iframe{
+    width: 760px; 
+    height: 427.5px;
+    border: solid #ef3340 5px;
+    margin-bottom: 20px;
+}
+/*Nederland*/
+#nederlandBanner{
+    background-image: url(bilder/baner/zanvoort.jpeg);
+    min-height: 105vh;
+}
+#nederlandFlaggRod{
+    background-color: #ae1c28;
+}
+#nederlandFlaggHvit{
+    background-color: whitesmoke;
+}
+#nederlandFlaggBla{
+    background-color: #21468b;
+}
+#sectionRamme{
+    display: flex;
+    min-height: 110vh;
+    position: relative;
+}
+#sectionRamme img{
+    width: 30%;
+    position: absolute;
+    border-radius: 10px;
+    border: solid black 1px;
+}
+#pElementBla{
+    top: 5%;
+    left: 15%;
+    background-color: #21468b;
+}
+.pElement{
+    width: 25%;
+    min-height: 60vh;
+    z-index: 1000;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.pElement p{
+    width: 75%;
+    color: white;
+}
+.pElementBakgrunn{
+    width: 25%;
+    min-height: 60vh;
+    z-index: 900;
+    position: absolute;
+}
+#pElementBakgrunnBla{
+    background-color: #ae1c28;
+    top: 7%;
+    left: 16.5%;
+}
+#zanvoortKart{
+    top: 5%;
+    right: 15%;
+}
+#pElementRod{
+    bottom: 5%;
+    right: 16.5%;
+    background-color: #ae1c28;
+}
+#pElementBakgrunnRod{
+    background-color: #21468b;
+    bottom: 3%;
+    right: 15%;
+}
+#zanvoortSjo{
+    bottom: 3%;
+    left: 15%;
+}
+#oransjeArmy{
+    min-height: 50vh;
+    background-color: #ff9b00;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+#oransjeArmy img{
+    width: 35%;
+    border-radius: 10px;
+    border: solid 1px black;
+}
+#oransjeArmy div{
+    width: 30%;
+}
+/*Mesterskap*/
+#mesterskapGrid{
+    display: grid;
+    grid-template-columns: repeat(60,1fr);
+    gap: 1%;
+    width: 95%;
+    margin: auto;
+    margin-top: 25px;
+}
+#mesterskapGrid img{
+    width: 75%;
+}
+#mesterskapGrid img.imgMindre{
+    width: 60%;
+    margin: auto;
+}
+#mesterskapGrid img#forerMesterskapLederImg{
+    width: 100%;
+}
+#mesterskapGrid div{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+#forerMesterskapLeder{
+    grid-column: span 20;
+}
+.span3Mesterskap{
+    grid-column: span 20;
+}
+.span4Mesterskap{
+    grid-column: span 15;
+}
+.span5Mesterskap{
+    grid-column: span 12;
+}
+.forstePlassH1{
+    color: #c69320;
+}
+.andrePlassH1{
+    color: #a8a9ad;
+}
+.tredjePlassH1{
+    color: #a46628;
+}
+.mesterskapMerc{
+    border-right: solid 6px #00D2BE;
+    border-bottom: solid 6px #00D2BE;
+    border-radius: 10px;
+}
+.mesterskapRB{
+    border-right: solid 6px #12142d;
+    border-bottom: solid 6px #12142d;
+    border-radius: 10px;
+}
+.mesterskapMc{
+    border-right: solid 6px #ff9700;
+    border-bottom: solid 6px #ff9700;
+    border-radius: 10px;
+}
+.mesterskapFerrari{
+    border-right: solid 6px #DC0000;
+    border-bottom: solid 6px #DC0000;
+    border-radius: 10px;
+}
+.mesterskapAlpine{
+    border-right: solid 6px #0090FF;
+    border-bottom: solid 6px #0090FF;
+    border-radius: 10px;
+}
+.mesterskapAM{
+    border-right: solid 6px #006F62;
+    border-bottom: solid 6px #006F62;
+    border-radius: 10px;
+}
+.mesterskapAT{
+    border-right: solid 6px #2B4562;
+    border-bottom: solid 6px #2B4562;
+    border-radius: 10px;
+}
+.mesterskapWilliams{
+    border-right: solid 6px #005AFF;
+    border-bottom: solid 6px #005AFF;
+    border-radius: 10px;
+}
+.mesterskapAR{
+    border-right: solid 6px #900000;
+    border-bottom: solid 6px #900000;
+    border-radius: 10px;
+}
+.mesterskapHaas{
+    border-right: solid 6px whitesmoke;
+    border-bottom: solid 6px whitesmoke;
+    border-radius: 10px;
+}
+#mesterskapKonstruktor{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2%;
+    margin-bottom: 110px;
+}
+#mesterskapKonstruktor div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#mesterskapKonstruktor div img{
+    width: 80%;
+    margin: auto;
+}
+.mesterskapH1{
+    text-align: center;
+    font-size: 1.5rem;
+}
+#konstruktorH1{
+    margin-top: 100px;
+}
+/*Footer*/
+footer{
+    background-color: red;
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+footer section{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-between;
+    align-items: center;
+}
+footer section>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer img{
+    width: 10%;
+}
+.icon{
+    width: 40px;
+}
+.footerImgLang{
+    width: 150px;
+}
+#footerLogo{
+    justify-content: flex-start;
+}
+#footerFlexLang{
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+#footerFlexIcon{
+    justify-content: space-evenly;
+}
+#footerFlexIcon div{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+    color: black;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+.footerMargin{
+    margin: 0;
+}
+/*Responsiv nettside*/
+@media (max-width: 1300px){
+    #krasjGrid{
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+    }
+    .border-top{
+        border-top: solid 1px black;
+        padding-top: 10px;
+        margin-right: 2px;
+    }
+    #krasjGrid img{
+        width: 75%;
+        margin: auto;
+    }
+    #krasjGrid div.justify-contentLeft img{
+        margin: auto;
+    }
+    .avisFlex{
+        flex-direction: column;
+    }
+    .avisFlex p{
+        width: 60%;
+        margin: auto;
+        padding-bottom: 20px;
+    }
+    #nyheterGrid img.avisImg{
+        width: 80%;
+    }
+    #finale p{
+        width: 60%;
+        margin: auto;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 1000px){
+    /*Div*/
+    .border-top{
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+    /*Header*/
+    nav{
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav a{
+        font-size: 1rem;
+    }
+    header h1{
+        font-size: 2rem;
+    }
+    /*index*/
+    #nyheterGrid{
+        grid-template-columns: 1fr;
+    }
+    #nyheterGrid p{
+        width: 60%;
+    }
+    #nyheterGrid img{
+        width: 80%;
+        margin: auto;
+    }
+    #body #nyheterGrid img.marginAuto{
+        margin: auto;
+    }
+    #indexGrid{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .lopskalenderGrid{
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+    .lopskalenderGrid div{
+        text-align: center;
+    }
+    #f1Logo{
+        width: 100px;
+        height: 67px;
+    }
+    .indexLagFlex{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    #indexHeaderGrid{
+        grid-template-columns: 1fr 1fr;
+    }
+    #indexHeaderGrid div{
+        font-size: 1.2rem;
+    }
+    /*Forere*/
+    #forereGrid{
+        grid-template-columns: repeat(1,1fr);
+    }
+    /*Lagene*/
+    .lagBanner h1{
+        font-size: 2rem;
+    }
+    .lagForereFlex{
+        width: 100%;
+        flex-direction: column;
+    }
+    .lagForereFlex div{
+        width: 75%;
+    }
+    .lagForereFlex img{
+        padding-bottom: 10px;
+    }
+    /*Mercedes*/
+    #bannerMerc img{
+        width: 30%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #W12 img{
+        width: 80%;
+    }
+    .mcForere img{
+        width: 60%;
+    }
+    #wolffFlex{
+        padding-top: 5px;
+        flex-direction: column;
+    }
+    #wolffFlex img{
+        width: 30%;
+    }
+    #wolffFlex div p{
+        width: 150%;
+    }
+    /*Red Bull*/
+    #bannerRB img{
+        width: 60%;
+    }
+    #horner{
+        background-image: url(bilder/lagene/hornerBakgrunnMiddels.png);
+        min-height: 70vh;
+    }
+    #RBforere{
+        flex-direction: column;
+    }
+    #RBforere div{
+        width: 46%;
+    }
+    #RB16B{
+        min-height: 50vh;
+    }
+    /*McLaren*/
+    #MCL35M{
+        width: 70%;
+    }
+    #zakBrownFlex{
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 25px;
+    }
+    #zakBrownFlex img{
+        width: 60%;
+    }
+    #zakBrownFlex p{
+        width: 90%;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    /*Baner*/
+    .baneHeader{
+        font-size: 2rem;
+    }
+    .baneflagg{
+        width: 22%;
+        top: 12%;
+        left: 5%;
+    }
+    .banekart{
+        width: 80%;
+    }
+    /*Imola*/
+    #imolaInfoGronnGrid{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    #imolaInfoGronnGrid img{
+        margin-top: 10px;
+    }
+    #imolaInfoHvitGrid{
+        grid-template-columns: 1fr;
+    }
+    #imolaInfoHvitGrid img{
+        width: 50%;
+        padding-bottom: 10px;
+    }
+    #imolaInfoRodGrid{
+        grid-template-columns: 1fr;
+        margin-bottom: 10px;
+    }
+    /*Bahrain*/
+    #bahrainInfoSammendrag{
+        flex-direction: column;
+    }
+    #bahrainInfoSammendrag div{
+        width: 80%;
+        flex-direction: row;
+        padding-bottom: 15px;
+    }
+    #bahrainInfoSammendrag p{
+        width: 100%;
+    }
+    #bahrainInfoResultat{
+        flex-direction: column;
+        margin-top: 15px;
+    }
+    #bahrainInfoResultat section.femti{
+        width: 100%;
+    }
+    #bahrainFFramme{
+        flex-direction: column;
+    }
+    #bahrainFFramme div{
+        width: 100%;
+    }
+    /*Belgia*/
+    #belgiaInfoGridRamme{
+        grid-template-columns: repeat(1,1fr);
+    }
+    #belgiaInfoGridRamme div{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    #belgiaFunFactsImg{
+        border-top: solid 5px #fdda24;
+    }
+    #belgiaVideo iframe{
+        width: 608px; 
+        height: 342px;
+    }
+    #belgiaVideo h4{
+        font-size: 0.75rem;
+    }
+    /*Mesterskap*/
+    #mesterskapGrid{
+        font-size: 0.5rem;
+    }
+    .mesterskapH1{
+        font-size: 1rem;
+    }
+    #konstruktorH1{
+        margin-top: 50px;
+    }
+    #mesterskapKonstruktor{
+        margin-bottom: 75px;
+        font-size: 0.75rem;
+    }
+    /*Nederland*/
+    #oransjeArmy{
+        flex-direction: column;
+        width: 85%;
+    }
+    #oransjeArmy img{
+        width: 60%;
+        margin-bottom: 10px;
+    }
+    #oransjeArmy div{
+        width: 75%;
+    }
+    #sectionRamme{
+        min-height: 200vh;
+    }
+    #sectionRamme img{
+        width: 60%;
+    }
+    #zanvoortKart{
+        top: 26.5%;
+        right: 20%;
+    }
+    #zanvoortSjo{
+        bottom: 2%;
+        left: 20%;
+    }
+    .pElement{
+        width: 75%;
+        min-height: 35vh;
+    }
+    .pElementBakgrunn{
+        width: 75%;
+        min-height: 35vh;
+    }
+    #pElementBla{
+        top: 5%;
+        left: 11.75%;
+    }
+    #pElementBakgrunnBla{
+        top: 7%;
+        left: 14.5%;
+    }
+    #pElementRod{
+        bottom: 28.5%;
+        right: 14.5%;
+    }
+    #pElementBakgrunnRod{
+        bottom: 26.5%;
+        right: 11.75%;
+    }
+    /*Footer*/
+    footer section{
+        grid-template-columns: 0.90fr 1.2fr 0.90fr;
+    }
+    .footerImgLang{
+        width: 100px;
+    }
+    footer h4{
+        font-size: 0.70rem;
+    }
+}
+@media (max-width: 600px){
+    /*Nav*/
+    #banerLink{
+        display: block;
+    }
+    #kartLink{
+        display: none;
+    }
+    /*Forere*/
+    #forereGrid{
+        gap: 0;
+    }
+    .forereGridLiten{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .forereGridLiten img{
+        grid-template-columns: repeat(1,1fr);
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    /*Mercedes*/
+    #imgMcLogo{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    #bannerMerc img{
+        width: 40%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    /*Red Bull*/
+    #bannerRB img{
+        width: 70%;
+    }
+    #horner{
+        background-image: url(bilder/lagene/hornerBakgrunnLiten.png);
+    }
+    /*Imola*/
+    #imolaInfoHvitGrid img{
+        width: 70%;
+    }
+    /*MvLaren*/
+    #zakBrownFlex img{
+        width: 80%;
+    }
+    #MCL35M{
+        width: 100%;
+    }
+    /*Belgia*/
+    #belgiaVideo iframe{
+        width: 450px; 
+        height: 253px;
+    }
+    /*Kart*/
+    #kartRamme{
+        display: none;
+    }
+    #kartKalender{
+        display: block;
+    }
+    #indexGridLiten1Kart{
+        border-right: solid white 2px;
+        padding-right: 0px;
+        padding-left: 2px;
+        padding-top: 10px;
+    }
+    #indexGridLiten1Kart img{
+        margin-top: 5px;
+    }
+    /*Nederland*/
+    #sectionRamme{
+        min-height: 170vh;
+    }
+    #sectionRamme img{
+        width: 80%;
+    }
+    #zanvoortKart{
+        top: 30%;
+        right: 10%;
+    }
+    #zanvoortSjo{
+        bottom: 1%;
+        left: 10%;
+    }
+    .pElementBakgrunn{
+        min-height: 40vh;
+    }
+    #pElementBla{
+        top: 2%;
+        left: 11.75%;
+    }
+    #pElementBakgrunnBla{
+        top: 4%;
+        left: 14.5%;
+    }
+    #pElementRod{
+        bottom: 24.5%;
+        right: 14.5%;
+    }
+    #pElementBakgrunnRod{
+        bottom: 22.5%;
+        right: 11.75%;
+    }
+    #oransjeArmy img{
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    /*Footer*/
+    footer h4{
+        font-size: 0rem;
+    }
+}
