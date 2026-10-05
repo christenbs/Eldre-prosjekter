@@ -1,0 +1,164 @@
+header{
+    display: grid;
+    grid-template-columns: 0.9fr 1.2fr 0.9fr;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: #ffc857;
+}
+header h1{
+    font-size: 2.5rem;
+}
+header div{
+    display: flex;
+    align-items: center;
+}
+header img{
+    height: 50px;
+}
+#headerTittel{
+    display: flex;
+    justify-content: center;
+}
+#headerNav{
+    display: flex;
+    justify-content: flex-end;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 1.2rem;
+}
+nav a:hover{
+    border-bottom: solid #ff1801 4px;
+}
+.active{
+    border-bottom: solid #ff1801 4px;
+}
+nav a img#favoritterStjerneMal{
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+}
+/* Index Header */
+#indexHeader{
+    width: 100%;
+    position: relative;
+    background-color: black;
+}
+#indexBakgrunn{
+    display: block;
+}
+#indexHeader img#indexBakgrunn{
+    width: 100%;
+    opacity: 60%;
+    z-index: 1;
+}
+#indexAbsolute{
+    position: absolute;
+    width: 96%;
+    top: 25px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#indexHeader div img{
+    height: 60px;
+    z-index: 300;
+}
+.sidenav {
+    height: 70px;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 98px;
+    right: 0px;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    border-top: #ff1801 solid 3px;
+}
+.sidenav a {
+    padding: 20px;
+    font-size: 22px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    text-decoration: none;
+    border-bottom: solid black 3px;
+}
+.sidenav a:hover {
+    color: #d6d4d4;
+    border-bottom: solid #ff1801 3px;
+    text-decoration: none;
+}
+.displayNone{
+    display: none;
+}
+.displayBlock{
+    display: block;
+}
+#navAktivator:hover, #navAktivator2:hover{
+    cursor: pointer;
+}
+nav a img#favoritterStjerne{
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+#favoritter{
+    display: flex;
+}
+h1#indexH1{
+    position: absolute;
+    color: white;
+    left: 33%;
+    top: 38%;
+    font-size: 3rem;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-bottom: #ff1801 solid 6px;
+}
+#indexDiv{
+    position: absolute;
+    color: white;
+    width: 20%;
+    height: 20%;
+    top: 75%;
+    left: 7%;
+    background-color: rgb(77, 75, 75);
+    font-size: 1.5rem;
+    text-align: center;
+    z-index: 1;
+    border: solid black 1px;
+}
+#indexDiv p{
+    padding: 10px;
+}
+#indexDivRod{
+    position: absolute;
+    width: 20%;
+    min-height: 20%;
+    top: 76%;
+    left: 8%;
+    background-color: #ff1801;
+    border: solid black 1px;
+}
+#pilNed{
+    width: 6%;
+    position: absolute;
+    left: 47%;
+    top: 93%;
+    transition: 1s;
+}
+#pilNed:hover{
+    top: 92%;
+    transition: 1s;
+}

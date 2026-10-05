@@ -1,0 +1,90 @@
+{% extends "mal.html" %}
+{% block headLink %}
+    <link rel="stylesheet" href='{{url_for("static", filename="css/index.css")}}'>
+{% endblock %}
+<body>
+    {% block header %}
+        <section id="indexHeader">
+            <img onclick="closeNav()" id="indexBakgrunn" src='{{url_for("static", filename="mainBakgrunn2.jpeg")}}' alt=""> 
+            <div id="indexAbsolute">
+                <div id="indexLogo">
+                    <img src='{{url_for("static", filename="f1Logo.png")}}' alt=""> 
+                    <img src='{{url_for("static", filename="stjerneOutlineFyltU.png")}}' alt=""> 
+                </div>
+                <img id="navAktivator" onclick="openNav()" src='{{url_for("static", filename="navClicker.png")}}' alt=""> 
+                <img class="displayNone" id="navAktivator2" onclick="closeNav()" src='{{url_for("static", filename="navClicker.png")}}' alt=""> 
+                </div>
+                <div>
+                    <nav id="mySidenav" class="sidenav">
+                        <a href="/forerene">Førerene</a>
+                        <a href="/lag">Lagene</a>
+                        <a href="/baner">Banene</a>
+                        <a id="favoritter" href="/favoritter">Favoritter <img id="favoritterStjerne" src='{{url_for("static", filename="stjerneOutlineFyltU.png")}}' alt=""></a>
+                    </nav>
+                </div>
+                <h1 id="indexH1">F1 2022 Favorittene</h1>
+                <div id="indexDiv">
+                    <p>
+                        Siden der DU kan lage din egen personlige F1 favorittliste.
+                    </p>
+                </div>
+                <div id="indexDivRod">
+                </div>
+                <a href="#intro"><img id="pilNed" src='{{url_for("static", filename="pilNed.gif")}}' alt=""></a>
+            </div>
+        </section>
+    {% endblock %}
+    {% block innhold %}
+        <section id="intro">
+            <div id="divIntroduksjon">
+                <div>
+                    <p id="introduksjon">
+                        Alt du trenger å gjøre for å favoritisere din favoritt fører, bane eller lag er å trykk på den røde stjerna, slik som den på under og hos Sainz til høyre.
+                    </p>
+                </div>
+                <div>
+                    <img id="indexFavoritiser99" class="pointer" onclick="favoritiser(99)" src='{{url_for("static", filename="stjerneOutline.png")}}' alt=""> 
+                    <img id="indexUnFavoritiser99" class="displayNone pointer" onclick="unFavoritiser(99)" src='{{url_for("static", filename="stjerneOutlineFyltU.png")}}' alt=""> 
+                </div>
+            </div>
+            <div id="introGridDivSainz">
+                {% for id, forer in sainz.items() %}
+                    <div id="forerSainz">
+                        <div id="sainzHeader">
+                            <h3>{{forer["name"]}} {{forer["surname"]}}</h3>
+                            <img class="flagg" src='{{forer["flag"]}}' alt="">
+                        </div>
+                        <div id="sainzInnerDiv">
+                            <img src='{{forer["portrait"]}}' alt="">
+                            <p id="sainzBio">
+                                {{forer["age"]}} år gamle {{forer["name"]}} {{forer["surname"]}} fra {{forer["nationality"]}} kjører for {{forer["constructor"]}} med nummer {{forer["number"]}}. 
+                                Han har til sammen {{forer["points"]}} poeng på sine {{forer["starts"]}} starter.
+        
+                                {% if "titles" in forer %}
+                                    {{forer["name"]}} {{forer["surname"]}} har vunnet {{forer["titles"]}} verdensmesterskap, {{forer["wins"]}} løp og har {{forer["poles"]}} "pole positions".
+        
+                                {% elif forer["wins"] | int > 0 and forer["poles"] | int > 0 %}
+                                    {{forer["name"]}} {{forer["surname"]}} har vunnet {{forer["wins"]}} løp og har {{forer["poles"]}} "pole positions".
+        
+                                {% elif forer["wins"] | int > 0 and forer["poles"] | int == 0 %}
+                                    {{forer["name"]}} {{forer["surname"]}} har vunnet {{forer["wins"]}} løp.
+        
+                                {% elif forer["wins"] | int == 0 and forer["poles"] | int > 0 %}
+                                    {{forer["name"]}} {{forer["surname"]}} har har {{forer["poles"]}} "pole position".
+                                {% endif %}
+                            </p>
+                        </div>
+                        <img id="sainzLogo" src='{{forer["teamLogo"]}}' alt="">
+                        <div class="favoritiser">
+                            <img id="indexFavoritiser100" class="pointer" onclick="favoritiser(100)" src='{{url_for("static", filename="stjerneOutline.png")}}' alt=""> 
+                            <img id="indexUnFavoritiser100" class="displayNone pointer" onclick="unFavoritiser(100)" src='{{url_for("static", filename="stjerneOutlineFyltU.png")}}' alt=""> 
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+        <section>
+        </section>
+    {% endblock %}
+</body>
+

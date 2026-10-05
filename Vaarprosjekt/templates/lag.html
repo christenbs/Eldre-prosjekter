@@ -1,0 +1,98 @@
+{% extends "mal.html" %}
+
+{% block headTittel %}
+    <title>Lagene</title>
+{% endblock %}
+{% block headLink %}
+    <link rel="stylesheet" href='{{url_for("static", filename="css/lag.css")}}'>
+{% endblock %}
+<body>
+    <header>
+        {% block tittel %}
+            <h1>Lagene</h1>
+        {% endblock %}
+        <nav>
+            {% block activeLag %}
+                <a class="active" href="/lag">Lagene</a>
+            {% endblock %}
+        </nav>
+    </header>
+    {% block innhold %}
+        <section class="hovedSection">
+            {% for id, lag in lag.items() %}
+                <div class="relative">
+                    <div class="lag" id='lag{{id}}'>
+                        <h2>
+                            {{lag["name"]}}
+                            {% if lag["name"] == "Mclaren" %}
+                                <img class="lagLogo" src='{{lag["teamLogoB"]}}' alt="">
+                            {% else %}
+                                <img class="lagLogo" src='{{lag["teamLogo"]}}' alt="">
+                            {% endif %}
+                        </h2>
+                        <div class="lagInnerGrid">
+                            <div class="lagInfoDiv">
+                                <div>
+                                    <p>
+                                        {{lag["name"]}} er fra {{lag["nationality"]}} med hoverkvarter i {{lag["HQ"]}}. De har oppnådd:
+                                    </p>
+                                    <ul>
+                                        {% if lag["cTitles"] | int == 0 %}
+                                            <li>Verdensmesterskap - Kontruktør : ingen titler</li>
+                                        {% else %}
+                                            <li>Verdensmesterskap - Konstruktør : {{lag["cTitles"]}} titler</li> 
+                                        {% endif %}
+    
+                                        {% if lag["dTitles"] | int == 0 %}
+                                            <li>Verdensmesterskap - Fører : ingen titler</li>
+                                        {% else %}
+                                            <li>Verdensmesterskap - Fører : {{lag["dTitles"]}} titler</li> 
+                                        {% endif %}
+    
+                                        {% if lag["wins"] | int == 0 %}
+                                            <li>Løpsseiere : ingen</li>
+                                        {% else %}
+                                            <li>Løpsseiere : {{lag["wins"]}}</li> 
+                                        {% endif %}
+                                    </ul>
+                                    <img class="margin-top" src='{{lag["car"]}}' alt="">
+                                </div>
+                            </div>
+                            <div class="lagFørereGrid">
+                                <div class="span5"></div>
+                                <div class="span4">
+                                    <p>Lagsjef: </p>
+                                    <p>{{lag["boss"]}} </p>
+                                    <img class="margin-top" src='{{lag["bossP"]}}' alt="">
+                                </div>
+                                <div class="span5"></div>
+                                <div class="span2"></div>
+                                <div class="span4">
+                                    <p>1. Fører: </p>
+                                    <p>{{lag["drivers"][0]}} </p>
+                                    <img class="margin-bottom" src='{{lag["forer1"]}}' alt="">
+                                </div>
+                                <div class="span2"></div>
+                                <div class="span4">
+                                    <p>2. Fører: </p>
+                                    <p>{{lag["drivers"][1]}} </p>
+                                    <img class="margin-bottom" src='{{lag["forer2"]}}' alt="">
+                                </div>
+                                <div class="span2"></div>
+                            </div>
+                        </div>
+                        {% if id not in favoritter %}
+                        <form action="/lag/legg-til/{{id}}">
+                            <button type="submit"><img class="pointer"  src='{{url_for("static", filename="stjerneOutline.png")}}' alt=""> </button>
+                        </form>
+                        {% else %}
+                            <form action="/lag/slett/{{id}}">
+                                <button type="submit"><img class="pointer"  src='{{url_for("static", filename="stjerneOutlineFyltU.png")}}' alt=""> </button>
+                            </form>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </section>
+    {% endblock %}
+</body>

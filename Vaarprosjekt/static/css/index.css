@@ -1,0 +1,87 @@
+#intro{
+    display: grid;
+    grid-template-columns: 0.30fr 0.70fr;
+    width: 90%;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    height: 100vh;
+    gap: 3%;
+}
+#introGridDivSainz{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#divIntroduksjon{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #121f45;
+    color: white;
+}
+#divIntroduksjon div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#divIntroduksjon div img.pointer{
+    width: 30%;
+}
+#divIntroduksjon div p#introduksjon{
+    width: 75%;
+    font-size: 1.3rem;
+}
+#forerSainz{
+    position: relative;
+    padding: 3%;
+    border-bottom: solid 7px #a6051a;
+    border-right: solid 7px #a6051a;
+    border-radius: 0 0 10% 0;
+}
+#sainzHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6%;
+}
+#sainzHeader img.flagg{
+    width: 10%;
+    border-radius: 10px;
+    border: solid 1px black;
+}
+#forerSainz img{
+    width: 50%;
+}
+#sainzInnerDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6%;
+}
+#sainzInnerDiv p#sainzBio{
+    width: 70%;
+    margin: auto;
+    font-size: 1.3rem;
+}
+#forerSainz div.favoritiser img{
+    width: 10%;
+    position: absolute;
+    bottom: 4%;
+    right: 2%;
+}
+#forerSainz img#sainzLogo{
+    width: 8%;
+    position: absolute;
+    bottom: 4%;
+    left: 52%;
+}
+
+@media (max-width: 600px){
+    #intro{
+        grid-template-columns: 1fr;
+    }
+}

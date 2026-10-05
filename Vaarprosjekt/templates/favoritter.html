@@ -1,0 +1,125 @@
+{% extends "mal.html" %}
+
+{% block headTittel %}
+    <title>Favoritter</title>
+{% endblock %}
+{% block headLink %}
+    <link rel="stylesheet" href='{{url_for("static", filename="css/favoritter.css")}}'>
+{% endblock %}
+<body>
+    <header>
+        {% block tittel %}
+            <h1>Favoritter</h1>
+        {% endblock %}
+        <nav>
+            {% block activeFavoritter %}
+                <a class="active" href="/favoritter">Favoritter
+                    <img id="favoritterStjerneMal" src='{{url_for("static", filename="stjerneOutlineFyltU.png")}}' alt="">
+                </a>
+            {% endblock %}
+        </nav>
+    </header>
+    {% block innhold %}
+        {% if favorittForere |length == 0 and favorittBaner |length == 0 and favorittLag |length == 0 %}
+            <section id="tomFavorittRamme">
+                <div id="tomFavoritt">
+                    <H2>Du har ikke lagt til favoritter enda.</H2>
+                    <p>
+                        Gå til <a href="/forerene">FØRERENE</a>, <a href="/lag">LAGENE</a>, eller <a href="/baner">BANENE</a> for å velge dine favoritter.
+                    </p>
+                </div>
+            </section>
+        {% endif %}  
+        {% if favorittForere |length > 0 %}
+            <section>
+                <div class="favoritterH1">
+                    {% if favorittForere |length > 1 %}
+                        <h1>Favorittførere :</h1>
+                    {% else %}
+                        <h1>Favorittfører :</h1>
+                    {% endif %}
+                </div>
+                {% if favorittForere |length == 1 %}
+                    <div class="favorittForereGrid grid1">
+                {% elif favorittForere |length == 2 or favorittForere |length == 4 or favorittForere |length == 6 %}
+                    <div class="favorittForereGrid grid2">
+                {% else %}
+                    <div class="favorittForereGrid grid3">
+                {% endif %}
+                        {% for favoritt in favorittForere %}
+                        {% if forere[favoritt]["constructor"] == "Red Bull" %}
+                            <div class="InnerFavorittForereGrid forerRB">
+                        {% elif forere[favoritt]["constructor"] == "Ferrari" %}
+                            <div class="InnerFavorittForereGrid forerFerrari">
+                        {% elif forere[favoritt]["constructor"] == "Mercedes" %}
+                            <div class="InnerFavorittForereGrid forerMerc">
+                        {% elif forere[favoritt]["constructor"] == "Mclaren" %}
+                            <div class="InnerFavorittForereGrid forerMc">
+                        {% elif forere[favoritt]["constructor"] == "Alpine" %}
+                            <div class="InnerFavorittForereGrid forerAlpine">
+                        {% elif forere[favoritt]["constructor"] == "Aston Martin" %}
+                            <div class="InnerFavorittForereGrid forerAM">
+                        {% elif forere[favoritt]["constructor"] == "Alpha Tauri" %}
+                            <div class="InnerFavorittForereGrid forerAT">
+                        {% elif forere[favoritt]["constructor"] == "Alfa Romeo" %}
+                            <div class="InnerFavorittForereGrid forerAR">
+                        {% elif forere[favoritt]["constructor"] == "Williams" %}
+                            <div class="InnerFavorittForereGrid forerW">
+                        {% elif forere[favoritt]["constructor"] == "Haas" %}
+                            <div class="InnerFavorittForereGrid forerHaas">
+                        {% endif %}
+                                <h3>{{forere[favoritt]["name"]}} {{forere[favoritt]["surname"]}}</h3>
+                                <img class="forerPortrett" src='{{forere[favoritt]["portrait"]}}' alt="">
+                            </div>
+                        {% endfor %}
+                    </div>
+            </section>
+        {% endif %}
+        {% if favorittLag |length > 0 %}
+            <section>
+                <div class="favoritterH1">
+                    <h1>Favorittlag :</h1>
+                </div>
+                {% if favorittLag |length == 1 %}
+                    <div class="favorittLagGrid grid1">
+                {% elif favorittLag |length == 2 %}
+                    <div class="favorittLagGrid grid2">
+                {% else %}
+                    <div class="favorittLagGrid grid3">
+                {% endif %}
+                        {% for favoritt in favorittLag %}
+                            <div>
+                                <h3>{{lag[favoritt]["name"]}}</h3>
+                                <img src='{{lag[favoritt]["car"]}}' alt="">
+                            </div>
+                        {% endfor %}
+                    </div>
+            </section>
+        {% endif %}
+        {% if favorittBaner |length > 0 %}
+            <section>
+                <div class="favoritterH1">
+                    {% if favorittBaner |length > 1 %}
+                        <h1>Favorittbaner :</h1>
+                    {% else %}
+                        <h1>Favorittbane :</h1>
+                    {% endif %}
+                </div>
+                {% if favorittBaner |length == 1 %}
+                    <div id="favorittBanerGrid" class="grid1">
+                {% elif favorittBaner |length == 2 %}
+                    <div id="favorittBanerGrid" class="grid2">
+                {% else %}
+                    <div id="favorittBanerGrid" class="grid3">
+                {% endif %}
+                    {% for favoritt in favorittBaner %}
+                        <div>
+                            <h3>{{baner[favoritt]["name"]}}</h3>
+                            <img class="favorittBanerKart" src='{{baner[favoritt]["map"]}}' alt="">
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+        {% endif %}
+    {% endblock %}
+</body>

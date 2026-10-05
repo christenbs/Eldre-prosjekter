@@ -1,0 +1,83 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+#banerGrid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 95%;
+    margin: auto;
+    gap: 50px;
+    margin-top: 2%;
+}
+.baner{
+    padding-bottom: 5%;
+    border-right: #bd1101 solid 4px;
+    border-bottom: #bd1101 solid 4px;
+    border-radius: 0 0% 10% 0;
+}
+#banerGrid div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+img.baneKart{
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+}
+#banerGrid section.baneBanner{
+    display: flex;
+}
+.baner{
+    position: relative;
+}
+img.flagg{
+    width: 15%;
+    border: 1px solid black;
+    display: inline;
+    position: absolute;
+    top: 22%;
+    left: 10%;
+}
+.aKart{
+    display: flex;
+    justify-content: center;
+}
+img#flagg3{
+    left: 70%;
+}
+img#flagg5{
+    left: 8%;
+}
+img#flagg8{
+    left: 70%;
+}
+img#flagg9{
+    top: 75%;
+}
+img#flagg12{
+    top: 60%;
+}
+img#flagg16{
+    left: 60%;
+}
+img#flagg18{
+    top: 60%;
+}
+img#flagg19{
+    top: 80%;
+    left: 50%;
+}
+img#flagg20{
+    top: 70%;
+}
+img#flagg21{
+    top: 80%;
+    left: 70%;
+}
+img#flagg22{
+    top: 20%;
+    left: 70%;
+}

@@ -1,0 +1,22 @@
+footer{
+    min-height: 15vh;
+    background-color: #ffc857;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+footer div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footerLogo{
+    justify-content: flex-start;
+    margin-left: 25px;
+}
+.footerF1{
+    width: 250px;
+}
+.footerStjerne{
+    width: 60px;
+}

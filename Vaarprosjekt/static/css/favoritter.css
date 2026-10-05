@@ -1,0 +1,134 @@
+main{
+    min-height: 72vh;
+}
+section{
+    margin-bottom: 100px;
+}
+#tomFavorittRamme{
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+#tomFavoritt{
+    width: 45%;
+    min-height: 60vh;
+    background-color: #245639;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#tomFavoritt a{
+    text-decoration: none;
+    color: white;
+}
+#tomFavoritt a:hover{
+    border-bottom: solid 3px #ff1801;
+}
+.favoritterH1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.favoritterH1 H1{
+    border-bottom: solid 4px #ff1801;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 5px;
+}
+.forerPortrett{
+    width: 40%;
+    margin: auto;
+}
+.favorittForereGrid{
+    display: grid;
+    gap: 25px;
+    width: 95%;
+    margin: auto;
+}
+.grid1{
+    grid-template-columns: 1fr;
+}
+.grid2{
+    grid-template-columns: repeat(2,1fr);
+}
+.grid3{
+    grid-template-columns: repeat(3,1fr);
+}
+div.InnerFavorittForereGrid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+    border-radius: 0 0 10% 0;
+}
+.forerRB{
+    border-bottom: solid 4px #121f45;
+    border-right: solid 4px #121f45;
+}
+.forerFerrari{
+    border-bottom: solid 4px #a6051a;
+    border-right: solid 4px #a6051a;
+}
+.forerMerc{
+    border-bottom: solid 4px #00a19c;
+    border-right: solid 4px #00a19c;
+}
+.forerMc{
+    border-bottom: solid 4px #ff8000;
+    border-right: solid 4px #ff8000;
+}
+.forerAlpine{
+    border-bottom: solid 4px #005ba9;
+    border-right: solid 4px #005ba9;
+}
+.forerAM{
+    border-bottom: solid 4px #00594f;
+    border-right: solid 4px #00594f;
+}
+.forerAT{
+    border-bottom: solid 4px #00293f;
+    border-right: solid 4px #00293f;
+}
+.forerAR{
+    border-bottom: solid 4px #981e32;
+    border-right: solid 4px #981e32;
+}
+.forerW{
+    border-bottom: solid 4px #041e42;
+    border-right: solid 4px #041e42;
+}
+.forerHaas{
+    border-bottom: solid 4px whitesmoke;
+    border-right: solid 4px whitesmoke;
+}
+.favorittLagGrid{
+    display: grid;
+}
+.favorittLagGrid div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.favorittLagGrid div img{
+    width: 450px;
+}
+#favorittBanerGrid{
+    display: grid;
+}
+#favorittBanerGrid div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.favorittBanerKart{
+    width: 70%;
+    border-right: #bd1101 solid 4px;
+    border-bottom: #bd1101 solid 4px;
+    border-radius: 0 0 10% 0;
+    padding-bottom: 10px;
+}

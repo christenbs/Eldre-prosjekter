@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block headTittel %}
+        <title>Formel 1 2022 - Favorittene</title>
+    {% endblock %}
+        <link rel="stylesheet" href='{{url_for("static", filename="css/header.css")}}'>
+        <link rel="stylesheet" href='{{url_for("static", filename="css/footer.css")}}'>
+        <link rel="stylesheet" href='{{url_for("static", filename="css/style.css")}}'>
+    {% block headLink %}
+    {% endblock %}
+    <script defer src='{{url_for("static", filename="js/funksjoner.js")}}'></script>
+</head>
+<body>
+    {% block header %}
+        <header>
+            <div>
+                <a href="/"><img src='{{url_for("static", filename="f1Logo.png")}}' alt=""></a>
+                <a href="/"><img src='{{url_for("static", filename="stjerneOutline.png")}}' alt=""></a>
+            </div>
+            <div id="headerTittel">
+                {% block tittel %}
+                    <h1>Formel 1 2022 - Favorittene</h1>
+                {% endblock %}
+            </div>
+            <div id="headerNav">
+                <nav>
+                    {% block activeForerene %}
+                        <a href="/forerene">Førerene</a>
+                    {% endblock %}
+                    {% block activeLag %}
+                        <a href="/lag">Lagene</a>
+                    {% endblock %}
+                    {% block activeBaner %}
+                        <a href="/baner">Banene</a>
+                    {% endblock %}
+                    {% block activeFavoritter %}
+                        <a href="/favoritter">Favoritter
+                            <img id="favoritterStjerneMal" src='{{url_for("static", filename="stjerneOutlineFyltU.png")}}' alt="">
+                        </a>
+                    {% endblock %}
+                </nav>
+            </div>
+        </header>
+    {% endblock %}
+    <main>
+        {% block innhold %}
+        {% endblock %}
+    </main>
+    <footer>
+        <div class="footerLogo">
+            <a href="/"><img class="footerF1" src='{{url_for("static", filename="f1Logo.png")}}' alt=""></a>
+            <a href="/"><img class="footerStjerne" src='{{url_for("static", filename="stjerneOutline.png")}}' alt=""></a>
+        </div>
+        <div>
+            <h2>Design din egen favorittliste!</h2>
+        </div>
+        <div></div>
+    </footer>
+</body>
+</html>

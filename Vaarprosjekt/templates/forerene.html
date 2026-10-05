@@ -1,0 +1,72 @@
+{% extends "mal.html" %}
+
+{% block headTittel %}
+    <title>Førerene</title>
+{% endblock %}
+{% block headLink %}
+    <link rel="stylesheet" href='{{url_for("static", filename="css/forere.css")}}'>
+{% endblock %}
+<body>
+    <header>
+        {% block tittel %}
+            <h1>Førerene</h1>
+        {% endblock %}
+        <nav>
+            {% block activeForerene %}
+                <a class="active" href="/forerene">Førerene</a>
+            {% endblock %}
+        </nav>
+    </header>
+    <main>
+        {% block innhold %}
+            <section id="forereGrid">
+                {% for id, forer in forere.items() %}
+                    <div class="forer{{id}}" class="forere">
+                            <div class="forerHeaderDiv">
+                                <h3>{{forer["name"]}} {{forer["surname"]}}</h3>
+                                <img class="flagg" src='{{forer["flag"]}}' alt="">
+                            </div>
+                            <div class="forerInnerGrid">
+                                <div>
+                                    <img src='{{forer["portrait"]}}' alt="">
+                                </div>
+                                <div class="info">
+                                    <p>
+                                        {{forer["age"]}} år gamle {{forer["name"]}} {{forer["surname"]}} fra {{forer["nationality"]}} kører for {{forer["constructor"]}} med nummer {{forer["number"]}}. 
+                                        Han har til sammen {{forer["points"]}} poeng på sine {{forer["starts"]}} starter.
+
+                                        {% if "titles" in forer %}
+                                            {{forer["name"]}} {{forer["surname"]}} har vunnet {{forer["titles"]}} verdensmesterskap, {{forer["wins"]}} løp og har {{forer["poles"]}} "pole positions".
+
+                                        {% elif forer["wins"] | int > 0 and forer["poles"] | int > 0 %}
+                                            {{forer["name"]}} {{forer["surname"]}} har vunnet {{forer["wins"]}} løp og har {{forer["poles"]}} "pole positions".
+
+                                        {% elif forer["wins"] | int > 0 and forer["poles"] | int == 0 %}
+                                            {{forer["name"]}} {{forer["surname"]}} har vunnet {{forer["wins"]}} løp.
+
+                                        {% elif forer["wins"] | int == 0 and forer["poles"] | int > 0 %}
+                                            {{forer["name"]}} {{forer["surname"]}} har har {{forer["poles"]}} "pole position".
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <img class="teamLogo" src='{{forer["teamLogo"]}}' alt="">
+                            </div>
+
+                            {% if id not in favoritter %}
+                                <form action="/forer/legg-til/{{id}}">
+                                    <button type="submit"><img class="pointer"  src='{{url_for("static", filename="stjerneOutline.png")}}' alt=""> </button>
+                                </form>
+                            {% else %}
+                                <form action="/forer/slett/{{id}}">
+                                    <button type="submit"><img class="pointer"  src='{{url_for("static", filename="stjerneOutlineFyltU.png")}}' alt=""> </button>
+                                </form>
+                            {% endif %}
+                        </div>
+                {% endfor %}
+            </section>
+        {% endblock %}
+    </main>
+</body>

@@ -1,0 +1,60 @@
+{% extends "mal.html" %}
+
+{% block headTittel %}
+    <title>{{bane["name"]}}</title>
+{% endblock %}
+{% block headLink %}
+    <link rel="stylesheet" href='{{url_for("static", filename="css/banene.css")}}'>
+{% endblock %}
+{% block tittel %}
+<div class="baneneTittel">
+    <img class="falgHeader" src='{{bane["flag"]}}' alt="">
+    <h1>{{bane["country"]}}</h1>
+</div>
+{% endblock %}
+
+{% block innhold %}
+    <section>
+        {% if id |int == 1 %}
+            <a href="/baner"><img class="tilbake" src='{{url_for("static", filename="tilbakePil.png")}}' alt=""></a>
+        {% else %}
+            <a href="/bane/{{id |int -1}}"><img class="tilbake" src='{{url_for("static", filename="tilbakePil.png")}}' alt=""></a>
+        {% endif %}
+        {% if id | int == 22 %}
+            <a href="/baner"><img class="videre" src='{{url_for("static", filename="tilbakePilSnudd.png")}}' alt=""></a>
+        {% else %}
+            <a href="/bane/{{id | int +1}}"><img class="videre" src='{{url_for("static", filename="tilbakePilSnudd.png")}}' alt=""></a>
+        {% endif %}
+        <div class="pBaneneRamme">
+            <div>
+                <img class="baneKart" src='{{bane["map"]}}' alt="">
+            </div>
+            <div class="pDiv">
+                <p class="pBanene">
+                    Det {{id}}. løpet for sesongen. Med sine {{bane["corners"]}} svinger
+                    {% if bane["corners"]| int == 27 %}
+                        er {{bane["name"]}} den lengste banen på kalenderen. Banen, som ligger i byen {{bane["city"]}}, er {{bane["length"]}}km lang.
+                    {% else %}
+                        er {{bane["name"]}}, som ligger i byen {{bane["city"]}}, {{bane["length"]}}km lang.
+                    {% endif %}
+                    {{bane["name"]}} arangerte sin første Grand Prix i {{bane["firstGP"]}}. Den kjappeste rundet som er kjørt i et løp ble kjørt av {{bane["fastestD"]}} i {{bane["fastestY"]}} med en rundetid på {{bane["fastest"]}}.
+                    Løpet er {{bane["laps"]}} runder langt med en total distanse på {{(bane["length"] | float * bane["laps"] | int) | float |round(1) }}km.
+                    {% if bane["city"] == "Milano" or bane["city"] == "Austin"  %}
+                        Dette er det andre løpet på kalenderen i {{bane["country"]}}.
+                    {% elif bane["city"] == "Spa" %}
+                        Banen er kjent for det raske og farlige "Rouge-komplekset" som består av sving 2-4. 
+                    {% endif %}
+                </p>
+                {% if id not in favoritter %}
+                    <form action="/bane/legg-til/{{id}}">
+                        <button type="submit"><img class="pointer"  src='{{url_for("static", filename="stjerneOutline.png")}}' alt=""> </button>
+                    </form>
+                {% else %}
+                    <form action="/bane/slett/{{id}}">
+                        <button type="submit"><img class="pointer"  src='{{url_for("static", filename="stjerneOutlineFyltU.png")}}' alt=""> </button>
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

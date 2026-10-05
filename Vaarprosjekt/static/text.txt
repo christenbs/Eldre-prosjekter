@@ -1,0 +1,23 @@
+Legg merke til de små detaljene på siden!
+
+Piler som du kan bla til neste bane når du trykker inn på en bane.
+
+Du kan trykke på bakgrunnen på hovedsiden for å lukkke NAV baren.
+
+På "Favoritter vil ikke siden gå under 100vh, slik at footeren alltid holder seg på bunn av skjermen.
+
+Hvis du prøver å gå på favoritter uten å ha lagt til en favoritt,
+vil du få en beskjed om at dum må legge til favoritter med link til hver av sidene.
+
+Hvis du bare har ligt til en fører i favoritter, har førerene grid-template-columns 1fr
+Hvis du har to førere er det 2fr, tre førere 3fr, 4 førere 2fr
+Griden tilåpasser seg hvor mange førere du har lagt til
+Tilsvarende er det med lagene og banene.
+
+Fargen på borderen rundt førerene i favoritter bytter også farge utfra hvilket lag føreren kjører for. 
+Alt dette gjør jeg ved å bytte på classene til de forskjellige førerene med if-løkker. 
+
+Legg og så merke til hvordan jeg bruker blocker til å lage en "avtive" effekt i headeren og til å bytte tittel på fanene og sidene.
+Også hvordan jeg legger til css-ark til de forskjellige undersidene. Alt ved hjelp av blocker. 
+
+Takk for meg, morsomt prosjekt :)

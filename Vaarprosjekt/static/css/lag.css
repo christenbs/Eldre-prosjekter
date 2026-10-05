@@ -1,0 +1,123 @@
+.relative{
+    position: relative;
+    min-height: 78vh;
+}
+.hovedSection{
+    width: 90%;
+    margin: auto;
+}
+.lag{
+    min-height: 70vh;
+    width: 90%;
+    margin: auto;
+    border-radius: 10% 0 10% 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+h2{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.lagLogo{
+    height: 35px;
+}
+.lagInnerGrid{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.6fr 1fr;
+    gap: 10px;
+    font-size: 1.3rem;
+}
+.lagInfoDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.lagInnerGrid p{
+    width: 80%;
+    margin: auto;
+}
+.lagInnerGrid div{
+    width: 100%;
+}
+.lagFørereGrid{
+    display: grid;
+    grid-template-columns: repeat(14,1fr);
+    gap: 5px;
+}
+.lagFørereGrid div img{
+    width: 100%;
+}
+.lagFørereGrid div p{
+    font-size: 1rem;
+    text-align: center;
+}
+.span5{
+    grid-column: span 5;
+}
+.span4{
+    grid-column: span 4;
+}
+.span2{
+    grid-column: span 2;
+}
+.margin-top{
+    margin-top: 7px;
+}
+.margin-bottom{
+    margin-bottom: 10px;
+}
+img.pointer{
+    width: 5%;
+    position: absolute;
+    right: 3%;
+    top: 5%;
+}
+#lag1{
+    background-color: #121f45;
+    color: white;
+}
+#lag2{
+    background-color: #a6051a;
+    color: white;
+}
+#lag3{
+    background-color: #00a19c;
+}
+#lag4{
+    background-color: #ff8000;
+}
+#lag5{
+    background-color: #005ba9;
+}
+#lag6{
+    background-color: #00594f;
+}
+#lag7{
+    background-color: #00293f;
+    color: white;
+}
+#lag8{
+    background-color: #981e32;
+}
+#lag9{
+    background-color: #041e42;
+    color: white;
+}
+#lag10{
+    background-color: whitesmoke;
+}
+#lag1, #lag3, #lag5, #lag7, #lag9{
+    bottom: 0;
+    right: 0;
+}
+#lag2, #lag4, #lag6, #lag8, #lag10{
+    bottom: 0;
+}

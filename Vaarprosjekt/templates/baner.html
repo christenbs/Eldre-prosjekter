@@ -1,0 +1,38 @@
+{% extends "mal.html" %}
+
+{% block headTittel %}
+    <title>Banene</title>
+{% endblock %}
+{% block headLink %}
+    <link rel="stylesheet" href='{{url_for("static", filename="css/baner.css")}}'>
+{% endblock %}
+<body>
+    <header>
+        {% block tittel %}
+            <h1>Banene</h1>
+        {% endblock %}
+        <nav>
+            {% block activeBaner %}
+                <a class="active" href="/baner">Banene</a>
+            {% endblock %}
+        </nav>
+    </header>
+    {% block innhold %}
+        <section id="banerGrid">
+            {% for id, bane in baner.items() %}
+                <div class="bane{{id}} baner">
+                    <a class="tittelBaner effekt" href="/bane/{{id}}">
+                        <h5>Race - {{id}}</h5>
+                        <h3>{{bane["name"]}}</h3>
+                    </a>
+                    <a href="/bane/{{id}}">
+                        <img id="flagg{{id}}" class="flagg" src='{{bane["flag"]}}' alt="">
+                    </a>
+                    <a class="aKart" href="/bane/{{id}}">
+                        <img class="baneKart" src='{{bane["map"]}}' alt="">
+                    </a>
+                </div>
+            {% endfor %}
+        </section>
+    {% endblock %}
+</body>

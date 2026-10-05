@@ -1,0 +1,122 @@
+#forereGrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 80%;
+    margin: auto;
+    gap: 50px;
+    margin-top: 2%;
+}
+#forereGrid div{
+    position: relative;
+}
+#forereGrid img{
+    width: 70%;
+    border-radius: 0 10% 10% 0;
+}
+#forereGrid img.flagg{
+    width: 6%;
+    margin: 1%;
+    border-radius: 5px;
+    border: solid black 1px;
+}
+.forerHeaderDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+}
+.forerHeaderDiv h3{
+    font-size: 1.3rem;
+}
+.forerInnerGrid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.forerInnerGrid div{
+    display: flex;
+    justify-content: center;
+}
+.pointer:hover{
+    cursor: pointer;
+}
+#forereGrid div img.pointer{
+    position: absolute;
+    width: 5%;
+    right: 3%;
+    bottom: 3%;
+}
+#forereGrid img.teamLogo{
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+}
+p{
+    width: 65%;
+    margin: auto;
+    font-size: 1.2rem;
+}
+/* Borders */
+
+.forer1, .forer2{
+    border-bottom: solid 8px #121f45;
+    border-right: solid 8px #121f45;
+    border-radius: 0 0 10% 0;
+    padding-bottom: 3%;
+}
+.forer3, .forer4{
+    border-bottom: solid 8px #a6051a;
+    border-right: solid 8px #a6051a;
+    border-radius: 0 0 10% 0;
+    padding-bottom: 3%;
+}
+.forer5, .forer6{
+    border-bottom: solid 8px #00a19c;
+    border-right: solid 8px #00a19c;
+    border-radius: 0 0 10% 0;
+    padding-bottom: 3%;
+}
+.forer7, .forer8{
+    border-bottom: solid 8px #ff8000;
+    border-right: solid 8px #ff8000;
+    border-radius: 0 0 10% 0;
+    padding-bottom: 3%;
+}
+.forer9, .forer10{
+    border-bottom: solid 8px #005ba9;
+    border-right: solid 8px #005ba9;
+    border-radius: 0 0 10% 0;
+    padding-bottom: 3%;
+}
+.forer11, .forer12{
+    border-bottom: solid 8px #00594f;
+    border-right: solid 8px #00594f;
+    border-radius: 0 0 10% 0;
+    padding-bottom: 3%;
+}
+.forer13, .forer14{
+    border-bottom: solid 8px #00293f;
+    border-right: solid 8px #00293f;
+    border-radius: 0 0 10% 0;
+    padding-bottom: 3%;
+}
+.forer15, .forer16{
+    border-bottom: solid 8px #981e32;
+    border-right: solid 8px #981e32;
+    border-radius: 0 0 10% 0;
+    padding-bottom: 3%;
+}
+.forer17, .forer18{
+    border-bottom: solid 8px #041e42;
+    border-right: solid 8px #041e42;
+    border-radius: 0 0 10% 0;
+    padding-bottom: 3%;
+}
+.forer19, .forer20{
+    border-bottom: solid 8px whitesmoke;
+    border-right: solid 8px whitesmoke;
+    border-radius: 0 0 10% 0;
+    padding-bottom: 3%;
+}
