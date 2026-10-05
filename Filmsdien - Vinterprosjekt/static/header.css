@@ -1,0 +1,32 @@
+header{
+    background-color: #EFCA08;
+    min-height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid 4px #204B57;
+}
+.logo{
+    width: 12%;
+}
+header div {
+    width: 50%;
+    margin: 1%;
+}
+nav{
+    display: flex;
+    justify-content: end;
+    margin-right: 10%;
+    gap: 5%;
+}
+nav a{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    border-bottom: #EFCA08 solid 2px;
+}
+nav a:hover{
+    border-bottom: solid black 2px;
+    transition: 0.5s;
+}

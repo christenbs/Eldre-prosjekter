@@ -1,0 +1,47 @@
+{% extends "mal.html" %}
+{% block head %}
+    <title>Filmsiden Hjem</title>
+    <link rel="stylesheet" href='{{url_for("static", filename="index.css")}}'>
+{% endblock %}
+
+{% block main %}
+    <div class="underheader">
+        <h1>Filmsiden</h1>
+        <h2>Finn dine yndlingsfilmer</h2>
+    </div>
+    <div class="underheader bakgrunnRoed favorittliste">
+        <h2>Under kan du velge hvilken av de to filmene du liker best og til slutt finne din yndlingsfilm blant top 250 filmer hos IMDB</h2>
+    </div>
+    <section id="favorittSection">
+        {% for film in valgte_filmer %}
+            <div class="filmvalg">
+                <h1>{{film["navn"]}}</h1>
+                <img class="indexPoster" src="{{film['bilde']}}" alt="">
+                <p>
+                    Poeng: <span class="film-poeng" data-film="{{film['navn']}}">{{favorittpoeng[film["navn"]]}}</span>
+                </p>
+                <form action="{{url_for('rute_øk_faovrittpoeng', filmnavn=film['navn'])}}" method="POST" data-film="{{film['navn']}}">
+                    <button type="submit" class="knapp">
+                        <span aria-hidden="true">↑</span> Stem
+                    </button>
+                </form>
+            </div>
+        {% endfor %}
+    </section>
+    <p id="stemmeStatus" role="status" aria-live="polite"></p>
+    <div class="underheader bakgrunnRoed favorittliste" id="toppliste">
+        <h2>Din toppliste:</h2>
+    </div>
+    <section class="toppliste" id="topplisteListe">
+        {% for film in favoritter %}
+            <div data-film="{{film['navn']}}">
+                <h2>{{film['navn']}}</h2>
+                <p>Poeng: {{film['poeng']}}</p>
+            </div>
+        {% endfor %}
+    </section>
+{% endblock %}
+
+{% block script %}
+    <script src="{{url_for('static', filename='voting.js')}}" defer></script>
+{% endblock %}
